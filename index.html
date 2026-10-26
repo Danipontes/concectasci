@@ -256,6 +256,79 @@ th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)}
 th{color:var(--muted);font-weight:600}
 .scroll-x{overflow-x:auto}
 .login{margin:auto;width:min(380px,100%);padding:20px}
+/* ---------- Painel web do administrador ---------- */
+.main.admmain{padding:0;align-items:stretch}
+.wadm{flex:1;min-width:0;height:100%;background:var(--bg)}
+.w-top{flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 20px;min-height:58px;background:var(--surface);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.w-brand{display:flex;align-items:center;gap:10px}
+.w-brand span{color:var(--muted);font-size:14px;padding-left:10px;border-left:1px solid var(--line)}
+.w-top-r{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.w-user{color:var(--muted);font-size:14px;padding:0 6px}
+.w-body{flex:1;min-height:0;display:flex}
+.w-side{width:310px;flex:none;overflow:auto;background:var(--surface);border-right:1px solid var(--line);padding:16px 14px}
+.w-side-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.w-ev{width:100%;display:flex;gap:12px;align-items:center;text-align:left;padding:10px;border-radius:12px;border:1px solid transparent;background:none;margin-bottom:6px;min-height:64px}
+.w-ev b{display:block;font-size:14px;line-height:1.25}
+.w-ev small{display:block;color:var(--muted);font-size:12px}
+.w-ev:hover{background:var(--bg)}
+.w-ev.on{background:color-mix(in srgb,var(--p) 12%,var(--surface));border-color:color-mix(in srgb,var(--p) 40%,var(--line))}
+.w-main{flex:1;min-width:0;overflow:auto;padding:24px 30px}
+.w-eh{display:flex;gap:16px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.w-eh h1{font-size:24px;line-height:1.2}
+.w-meta{color:var(--muted);font-size:14px;display:flex;gap:4px 18px;flex-wrap:wrap;margin-top:4px}
+.w-meta span{display:inline-flex;gap:6px;align-items:center}
+.w-steps{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:14px}
+.w-step{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-weight:600;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.w-step.ok{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 45%,var(--line));background:var(--okbg)}
+.w-step.cur{color:color-mix(in srgb,var(--p) 80%,var(--ink));border-color:var(--p);border-width:2px}
+.w-step.off{opacity:.6}
+.w-tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:20px;overflow-x:auto}
+.w-tab{min-height:46px;padding:0 16px;border:0;background:none;border-bottom:3px solid transparent;font-weight:600;color:var(--muted);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;margin-bottom:-1px}
+.w-tab:hover{color:var(--ink)}
+.w-tab.on{color:var(--ink);border-bottom-color:var(--p)}
+.w-tab .n{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:0 8px;font-size:12px;line-height:20px}
+.w-bar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:14px}
+.w-bar h2{font-size:19px}
+.w-filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.w-filters input{flex:2;min-width:240px;width:auto}
+.w-filters select{flex:1;min-width:160px;width:auto}
+.w-tw{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:auto}
+.w-table th{background:var(--bg);white-space:nowrap;padding:12px 12px}
+.w-table td{vertical-align:top;padding:12px}
+.w-table tr:last-child td{border-bottom:0}
+.w-table tbody tr:hover{background:color-mix(in srgb,var(--p) 5%,var(--surface))}
+.w-table .t{min-width:260px;max-width:380px;font-weight:600}
+.w-table .canc{text-decoration:line-through;color:var(--muted)}
+.w-act{display:flex;gap:4px;white-space:nowrap}
+.w-ib{width:38px;height:38px;border-radius:9px;border:1px solid var(--line);background:var(--surface);display:inline-flex;align-items:center;justify-content:center}
+.w-ib:hover{background:var(--bg)}
+.aulist{max-height:210px;overflow:auto;margin-top:8px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.aurow{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--line)}
+.aurow:last-child{border-bottom:0}
+.aurow>div{flex:1;min-width:0}
+.aurow b{display:block;font-size:14px}
+.aurow small{color:var(--muted);font-size:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.w-dov{position:absolute;inset:0;z-index:45;background:rgba(8,10,14,.45);display:flex;justify-content:flex-end}
+.w-dr{width:min(640px,100%);height:100%;background:var(--surface);display:flex;flex-direction:column;box-shadow:-10px 0 30px rgba(0,0,0,.25);animation:dr .2s ease-out}
+@keyframes dr{from{transform:translateX(30px);opacity:.5}to{transform:none;opacity:1}}
+.w-dh{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;border-bottom:1px solid var(--line)}
+.w-dbody{flex:1;overflow:auto;padding:20px 22px}
+.w-df{padding:14px 22px;border-top:1px solid var(--line);display:flex;gap:10px;justify-content:flex-end}
+.w-two{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start}
+.w-g2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.w-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.w-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.wadm .ov{align-items:center}
+.wadm .sheet{border-radius:18px;max-width:480px;max-height:80%;padding-bottom:18px;margin:0 16px}
+.wadm .sheet::before{display:none}
+@media (max-width:900px){
+  .w-body{flex-direction:column}
+  .w-side{width:auto;max-height:210px;border-right:0;border-bottom:1px solid var(--line)}
+  .w-two,.w-cols,.w-g2{grid-template-columns:1fr}
+  .w-kpis{grid-template-columns:repeat(2,1fr)}
+  .w-main{padding:16px}
+}
 </style>
 </head>
 <body>
@@ -312,7 +385,7 @@ let D=seed();
 
 /* ================= Estado ================= */
 const S={mode:'part',eventId:null,stack:[{name:'events'}],user:null,agenda:{},day:null,gt:'all',q:'',smode:'tudo',push:false,pushAsked:false,banner:true,
-  sheet:null,confirm:null,adm:false,apage:'dash',aev:'e1',ed:null,td:null,err:[],aq:'',agt:'all',ast:'all',regMode:'new'};
+  sheet:null,confirm:null,adm:false,atab:'resumo',newEv:false,drawer:null,aev:'e1',ed:null,td:null,gd:null,err:[],aq:'',agt:'all',adia:'all',ast:'all',regMode:'new'};
 
 /* ================= Utilitários ================= */
 const $=s=>document.querySelector(s);
@@ -570,41 +643,46 @@ function phoneShell(){
   return `<div class="shell phone">${hdr}<main class="view">${v.body}</main>${v.foot?`<div class="foot">${v.foot}</div>`:''}${tabs}${S.sheet?`<div class="ov" data-act="ov"><div class="sheet" role="dialog" aria-modal="true">${S.sheet}</div></div>`:''}</div>`;
 }
 
-/* ================= Admin ================= */
-const AV={};
+/* ================= Admin (painel web, desktop first) ================= */
 function aevt(){return D.eventos.find(e=>e.id===S.aev)}
+const copyEv=()=>({...aevt()});
 function slugify(s){return norm(s).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+const nG=e=>D.gts.filter(g=>g.evento===e.id).length;
+const nT=e=>D.trabalhos.filter(t=>t.evento===e.id).length;
+const errBox=()=>S.err.length?`<div class="alert red" role="alert">${icon('alert')}<div>${S.err.map(esc).join('<br>')}</div></div>`:'';
 function qr(seed){const n=21;let h=0;for(const c of seed)h=(h*31+c.charCodeAt(0))>>>0;const rnd=()=>{h=(h*1664525+1013904223)>>>0;return h/4294967296};
-  let r='';const fp=(x,y)=>x<8&&y<8||x>n-9&&y<8||x<8&&y>n-9;
-  for(let y=0;y<n;y++)for(let x=0;x<n;x++){let on;if(fp(x,y)){const lx=x%(n-7>x?100:1),ax=x<8?x:x-(n-7),ay=y<8?y:y-(n-7);on=(ax===0||ax===6||ay===0||ay===6||(ax>=2&&ax<=4&&ay>=2&&ay<=4))&&ax<=6&&ay<=6&&ax>=0&&ay>=0}else on=rnd()>.5;if(on)r+=`<rect x="${x}" y="${y}" width="1" height="1"/>`}
+  let r='';const fp=(x,y)=>(x<8&&y<8)||(x>n-9&&y<8)||(x<8&&y>n-9);
+  for(let y=0;y<n;y++)for(let x=0;x<n;x++){let on;if(fp(x,y)){const ax=x<8?x:x-(n-7),ay=y<8?y:y-(n-7);on=ax>=0&&ay>=0&&ax<=6&&ay<=6&&(ax===0||ax===6||ay===0||ay===6||(ax>=2&&ax<=4&&ay>=2&&ay<=4))}else on=rnd()>.5;if(on)r+=`<rect x="${x}" y="${y}" width="1" height="1"/>`}
   return `<svg class="qr" width="132" height="132" viewBox="-1 -1 23 23" role="img" aria-label="QR Code ilustrativo" fill="#111">${r}</svg>`}
 
-AV.login=()=>`<div class="login"><div style="text-align:center;margin-bottom:16px">${logo(null,60)}<h1 class="h1" style="margin-top:12px">Painel administrativo</h1><p class="sub">Acesso para a organização dos eventos</p></div>
+function loginHTML(){return `<div class="shell wadm" style="align-items:center;justify-content:center;overflow:auto"><div class="login card" style="padding:28px"><div style="text-align:center;margin-bottom:18px">${logo(null,60)}<h1 class="h1" style="margin-top:12px">Administração de eventos</h1><p class="sub">Acesso para a organização</p></div>
  <div class="f"><label for="l-email">E-mail</label><input id="l-email" type="email" value="admin@organizacao.org"></div>
  <div class="f"><label for="l-pw">Senha</label><input id="l-pw" type="password" value="demonstracao"></div>
- <button class="btn pri block" data-act="adm-login">Entrar</button><p class="sub" style="font-size:13px;margin-top:12px;text-align:center">Protótipo: qualquer dado entra. Na versão real, haverá super-admin e admin por evento.</p></div>`;
-
-AV.dash=()=>{const e=aevt(),ts=D.trabalhos.filter(t=>t.evento===e.id),ds=dias(e);const mx=Math.max(1,...ds.map(d=>ts.filter(t=>t.dia===d).length));
-  const nxt=ts.filter(t=>!cancelled(t)).sort(sortT).slice(0,4);
-  return `<div class="ph"><h1>Painel</h1><span class="badge ok">${esc(e.sigla)}</span></div>
-  <div class="grid"><div class="kpi"><b>${e.insc}</b><span>participantes</span></div><div class="kpi"><b>${ts.length}</b><span>trabalhos</span></div><div class="kpi"><b>${D.gts.filter(g=>g.evento===e.id).length}</b><span>GTs</span></div><div class="kpi"><b style="color:var(--danger)">${ts.filter(cancelled).length}</b><span>cancelados</span></div></div>
-  <div class="card"><b>Trabalhos por dia</b>${ds.map(d=>{const n=ts.filter(t=>t.dia===d).length;return `<div class="bar"><span>${dshort(d)}</span><i style="width:${n/mx*60+4}%"></i><span style="width:auto">${n}</span></div>`}).join('')}</div>
-  <div class="card"><b>Próximas apresentações</b>${nxt.map(t=>`<div class="row"><div><b>${esc(t.titulo)}</b><small>${dshort(t.dia)} · ${t.hora} · ${esc(t.sala)} · ${esc(GT(t.gt).sigla)}</small></div></div>`).join('')}</div>
-  <div class="alert ok">${icon('shield')}<div>LGPD: consentimento registrado por participante e por evento. Exclusão automática 90 dias após o encerramento.</div></div>`};
-
-AV.eventos=()=>`<div class="ph"><h1>Eventos</h1><button class="btn pri" data-act="ev-new">${icon('plus')} Novo evento</button></div>
- ${D.eventos.map(e=>`<div class="li"><div style="display:flex;gap:12px;align-items:center">${logo(e,48)}<div><b>${esc(e.nome)}</b><small>${rng(e)} · app.exemplo.org/${esc(e.slug)}</small><div style="display:flex;gap:4px;margin-top:6px">${[e.cp,e.cs,e.cd].map(c=>`<span title="${c}" style="width:20px;height:20px;border-radius:6px;background:${c};border:1px solid var(--line)"></span>`).join('')}</div></div></div><div class="acts"><button class="btn sm" data-act="ev-edit" data-id="${e.id}">${icon('edit',16)} Editar</button></div></div>`).join('')}`;
+ <button class="btn pri block" data-act="adm-login">Entrar</button><p class="sub" style="font-size:13px;margin-top:12px;text-align:center">Protótipo: qualquer dado entra. Na versão real, haverá super-admin e admin por evento.</p>
+ <button class="btn ghost block" data-act="mode" data-m="part" style="margin-top:8px">Ver como participante</button></div>${ovHTML()}</div>`}
 
 function evPreview(){const d=S.ed;const p=d.cp,t=textOn(p),r=ratio(p,t);const ac=d.cd;
   return `<div class="pv" style="--p:${p};--pt:${t};--acc:${ac};--acct:${textOn(ac)}"><div class="h" style="background:${p};color:${t}">${logo(d,38)}<div style="min-width:0"><b style="display:block;font-size:14px;line-height:1.2">${esc(d.nome||'Nome do evento')}</b><small style="opacity:.85">${d.ini&&d.fim?rng(d):''}</small></div></div>
   <div class="b"><div class="tc" style="cursor:default"><div class="tc-main"><div class="tc-meta"><span>09:00–09:20</span><span>Sala A1</span></div><h4>Título de um trabalho</h4><span class="tag" style="background:color-mix(in srgb,${p} 14%,#fff);color:color-mix(in srgb,${p} 78%,#000)">GT1</span> <span class="badge acc">Apresenta</span></div><span class="add on" style="display:flex;background:${p};color:${t}">${icon('check',20)}</span></div>
   <button class="btn pri block" style="background:${p};color:${t}">Botão principal</button></div></div>
-  ${r<4.5?`<div class="alert" style="margin-top:12px">${icon('alert')}<div>Contraste baixo (${r.toFixed(1)}:1) entre a cor principal e o texto. Escolha um tom mais claro ou mais escuro para melhorar a leitura.</div></div>`:`<p class="sub" style="font-size:13px;margin-top:10px;text-align:center">Contraste ${r.toFixed(1)}:1 — leitura confortável.</p>`}`}
-AV['evento-form']=()=>{const d=S.ed;return `<div class="ph"><h1>${d.id?'Editar evento':'Novo evento'}</h1><button class="btn" data-act="adm-nav" data-p="eventos">${icon('back')} Voltar</button></div>
- ${S.err.length?`<div class="alert red" role="alert">${icon('alert')}<div>${S.err.map(esc).join('<br>')}</div></div>`:''}
- <div class="two"><div class="card"><div class="g2">
+  ${r<4.5?`<div class="alert" style="margin-top:12px">${icon('alert')}<div>Contraste baixo (${r.toFixed(1)}:1) entre a cor principal e o texto. Escolha um tom mais claro ou mais escuro para melhorar a leitura.</div></div>`:`<p class="sub" style="font-size:13px;margin-top:10px;text-align:center">Contraste ${r.toFixed(1)}:1: leitura confortável.</p>`}`}
+
+/* ---- Abas do evento ---- */
+function tabResumo(e){
+  const ts=D.trabalhos.filter(t=>t.evento===e.id),gs=D.gts.filter(g=>g.evento===e.id),ds=dias(e);
+  const mx=Math.max(1,...ds.map(d=>ts.filter(t=>t.dia===d).length)),mg=Math.max(1,...gs.map(g=>ts.filter(t=>t.gt===g.id).length));
+  const nxt=ts.filter(t=>!cancelled(t)).sort(sortT).slice(0,5);let hint='';
+  if(!gs.length)hint=`<div class="alert">${icon('alert')}<div><b>Próximo passo: cadastrar os GTs do evento.</b> Os trabalhos só podem ser cadastrados depois, pois cada um precisa estar vinculado a um GT. <button class="link" data-act="atab" data-tab="gts">Ir para GTs</button></div></div>`;
+  else if(!ts.length)hint=`<div class="alert">${icon('alert')}<div><b>Próximo passo: cadastrar os trabalhos.</b> <button class="link" data-act="atab" data-tab="trabalhos">Ir para Trabalhos</button></div></div>`;
+  return `${hint}<div class="w-kpis"><div class="kpi"><b>${e.insc}</b><span>participantes</span></div><div class="kpi"><b>${gs.length}</b><span>GTs</span></div><div class="kpi"><b>${ts.length}</b><span>trabalhos</span></div><div class="kpi"><b style="color:var(--danger)">${ts.filter(cancelled).length}</b><span>apresentações canceladas</span></div></div>
+  <div class="w-cols"><div class="card"><b>Trabalhos por dia</b>${ds.map(d=>{const n=ts.filter(t=>t.dia===d).length;return `<div class="bar"><span>${dshort(d)}</span><i style="width:${n/mx*60+4}%"></i><span style="width:auto">${n}</span></div>`}).join('')}</div>
+  <div class="card"><b>Trabalhos por GT</b>${gs.length?gs.map(g=>{const n=ts.filter(t=>t.gt===g.id).length;return `<div class="bar"><span>${esc(g.sigla)}</span><i style="width:${n/mg*60+4}%"></i><span style="width:auto">${n}</span></div>`}).join(''):'<p class="sub" style="margin-top:8px">Nenhum GT cadastrado.</p>'}</div></div>
+  <div class="card"><b>Próximas apresentações</b>${nxt.length?nxt.map(t=>`<div class="row"><div><b>${esc(t.titulo)}</b><small>${dshort(t.dia)} · ${t.hora} · ${esc(t.sala)} · ${esc(GT(t.gt).sigla)}</small></div></div>`).join(''):'<p class="sub" style="margin-top:8px">Nada programado ainda.</p>'}</div>
+  <div class="alert ok">${icon('shield')}<div>LGPD: consentimento registrado por participante e por evento. Exclusão automática 90 dias após o encerramento.</div></div>`;
+}
+function tabDados(isNew){const d=S.ed;return `${errBox()}<div class="w-two"><div class="card"><div class="w-g2">
   <div class="f"><label for="e-nome">Nome do evento</label><input id="e-nome" data-f="nome" value="${esc(d.nome)}"></div>
-  <div class="f"><label for="e-sigla">Sigla (aparece no logo provisório)</label><input id="e-sigla" data-f="sigla" maxlength="5" value="${esc(d.sigla)}"></div>
+  <div class="f"><label for="e-sigla">Sigla (logo provisório)</label><input id="e-sigla" data-f="sigla" maxlength="5" value="${esc(d.sigla)}"></div>
   <div class="f"><label for="e-slug">Endereço (link e QR Code)</label><input id="e-slug" data-f="slug" value="${esc(d.slug)}"><small>app.exemplo.org/${esc(d.slug||'…')}</small></div>
   <div class="f"><label for="e-local">Local</label><input id="e-local" data-f="local" value="${esc(d.local)}"></div>
   <div class="f"><label for="e-ini">Início</label><input id="e-ini" type="date" data-f="ini" value="${d.ini}"></div>
@@ -613,55 +691,95 @@ AV['evento-form']=()=>{const d=S.ed;return `<div class="ph"><h1>${d.id?'Editar e
   <div class="f"><label for="e-cs">Cor secundária</label><input id="e-cs" type="color" data-f="cs" value="${d.cs}"></div>
   <div class="f"><label for="e-cd">Cor de destaque</label><input id="e-cd" type="color" data-f="cd" value="${d.cd}"></div>
   <div class="f"><label for="e-logo">Logo do evento</label><input id="e-logo" type="file" accept="image/*" data-act="logo-file"><small>Prefira imagem quadrada, 512 × 512 px. Defina antes de divulgar o QR Code.</small>${d.logoUrl?`<button class="link" data-act="logo-del" type="button" style="font-size:14px">Remover logo</button>`:''}</div>
- </div>
- <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn pri" data-act="ev-save">Salvar evento</button><button class="btn" data-act="adm-nav" data-p="eventos">Cancelar</button></div></div>
- <div><p class="lbl">Prévia no celular</p><div id="evprev">${evPreview()}</div><div class="card" style="margin-top:14px;text-align:center"><b>QR Code do evento</b>${qr(d.slug||'novo')}<small class="sub">Ilustrativo · app.exemplo.org/${esc(d.slug||'…')}</small></div></div></div>`};
+  </div><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn pri" data-act="ev-save">${isNew?'Criar evento e cadastrar GTs':'Salvar alterações'}</button>${isNew?'<button class="btn" data-act="ev-cancel-new">Cancelar</button>':'<button class="btn" data-act="atab" data-tab="dados">Descartar alterações</button>'}</div></div>
+  <div><p class="lbl">Prévia no celular</p><div id="evprev">${evPreview()}</div><div class="card" style="margin-top:14px;text-align:center"><b>QR Code do evento</b>${qr(d.slug||'novo')}<small class="sub">Ilustrativo · app.exemplo.org/${esc(d.slug||'…')}</small></div></div></div>`}
 
-AV.gts=()=>{const e=aevt();const gs=D.gts.filter(g=>g.evento===e.id);
-  return `<div class="ph"><h1>Grupos de Trabalho</h1><button class="btn pri" data-act="gt-new">${icon('plus')} Novo GT</button></div>
-  ${gs.map(g=>`<div class="li"><div><b>${esc(g.sigla)} · ${esc(g.nome)}</b><small>Coord.: ${esc(g.coord)} · ${D.trabalhos.filter(t=>t.gt===g.id).length} trabalho(s)</small><br><small>${esc(g.desc)}</small></div><div class="acts"><button class="btn sm" data-act="gt-edit" data-id="${g.id}">${icon('edit',16)} Editar</button><button class="btn sm" data-act="gt-del" data-id="${g.id}" aria-label="Excluir GT">${icon('trash',16)}</button></div></div>`).join('')||`<div class="empty"><b>Nenhum GT</b>Cadastre o primeiro GT deste evento.</div>`}`};
-function gtSheet(id){const g=id?D.gts.find(x=>x.id===id):{sigla:'',nome:'',coord:'',desc:''};S.gtEdit=id||null;
-  openSheet(`<h3>${id?'Editar GT':'Novo GT'}</h3><div class="f"><label for="g-sigla">Sigla</label><input id="g-sigla" value="${esc(g.sigla)}" maxlength="6"></div><div class="f"><label for="g-nome">Nome do GT</label><input id="g-nome" value="${esc(g.nome)}"></div><div class="f"><label for="g-coord">Coordenação</label><input id="g-coord" value="${esc(g.coord)}"></div><div class="f"><label for="g-desc">Descrição</label><textarea id="g-desc">${esc(g.desc)}</textarea></div><div id="gerr"></div><div class="acts"><button class="btn pri" data-act="gt-save">Salvar GT</button><button class="btn" data-act="close">Cancelar</button></div>`)}
+function tabGTs(e){const gs=D.gts.filter(g=>g.evento===e.id);
+  return `<div class="w-bar"><h2>Grupos de Trabalho</h2><button class="btn pri" data-act="gt-new">${icon('plus')} Novo GT</button></div>
+  ${gs.length?`<div class="w-tw"><table class="w-table"><thead><tr><th>Sigla</th><th>Nome</th><th>Coordenação</th><th>Trabalhos</th><th><span class="sr">Ações</span></th></tr></thead><tbody>${gs.map(g=>`<tr><td><span class="tag">${esc(g.sigla)}</span></td><td class="t">${esc(g.nome)}<small class="sub" style="display:block;font-weight:400">${esc(g.desc)}</small></td><td>${esc(g.coord)}</td><td>${D.trabalhos.filter(t=>t.gt===g.id).length}</td><td><div class="w-act"><button class="w-ib" data-act="gt-edit" data-id="${g.id}" aria-label="Editar GT ${esc(g.sigla)}">${icon('edit',16)}</button><button class="w-ib" data-act="gt-del" data-id="${g.id}" aria-label="Excluir GT ${esc(g.sigla)}">${icon('trash',16)}</button></div></td></tr>`).join('')}</tbody></table></div>
+  <div style="margin-top:16px"><button class="btn pri" data-act="atab" data-tab="trabalhos">Próximo passo: cadastrar trabalhos ${icon('chevR',16)}</button></div>`
+  :`<div class="card empty">${icon('layers',40)}<b>Nenhum GT neste evento</b>Cadastre os GTs primeiro: cada trabalho precisa estar vinculado a um deles.<br><button class="btn pri" data-act="gt-new">Cadastrar primeiro GT</button></div>`}`}
 
-AV.trabalhos=()=>{const e=aevt();const gs=D.gts.filter(g=>g.evento===e.id);const q=norm(S.aq);
-  return `<div class="ph"><h1>Trabalhos</h1><button class="btn pri" data-act="tr-new">${icon('plus')} Novo trabalho</button></div>
-  <div class="filters"><input id="aq" type="search" placeholder="Buscar título ou autor" value="${esc(S.aq)}" aria-label="Buscar trabalhos"><select data-flt="agt" aria-label="Filtrar por GT"><option value="all">Todos os GTs</option>${gs.map(g=>`<option value="${g.id}" ${S.agt===g.id?'selected':''}>${esc(g.sigla)} · ${esc(g.nome)}</option>`).join('')}</select><select data-flt="ast" aria-label="Filtrar por situação"><option value="all">Todas as situações</option><option value="agendado" ${S.ast==='agendado'?'selected':''}>Agendados</option><option value="cancelado" ${S.ast==='cancelado'?'selected':''}>Cancelados</option></select></div>
-  <div id="alist">${adminList()}</div>`};
-function adminList(){const e=aevt();const q=norm(S.aq);
-  const l=D.trabalhos.filter(t=>t.evento===e.id&&(S.agt==='all'||t.gt===S.agt)&&(S.ast==='all'||t.status===S.ast)&&(!q||norm(t.titulo).includes(q)||t.autores.some(a=>norm(a.nome).includes(q)))).sort(sortT);
-  return `<p class="count">${l.length} trabalho(s)</p>`+(l.map(t=>{const c=cancelled(t);return `<div class="li"><div><b ${c?'style="text-decoration:line-through;color:var(--muted)"':''}>${esc(t.titulo)}</b><small>${esc(GT(t.gt).sigla)} · ${dshort(t.dia)} · ${t.hora} · ${esc(t.sala)}</small><br><small>1º autor: ${esc(first(t).nome)} · Apresenta: ${esc(pres(t).nome)}</small> ${c?'<span class="badge red">Cancelado</span>':''}</div>
-   <div class="acts"><button class="btn sm" data-act="tr-edit" data-id="${t.id}">${icon('edit',16)} Editar</button>${c?`<button class="btn sm" data-act="tr-react" data-id="${t.id}">Reativar</button>`:`<button class="btn sm" data-act="tr-cancel" data-id="${t.id}">Cancelar apresentação</button>`}<button class="btn sm" data-act="tr-del" data-id="${t.id}" aria-label="Excluir trabalho">${icon('trash',16)}</button></div></div>`}).join('')||`<div class="empty"><b>Nenhum trabalho encontrado</b>Ajuste os filtros ou cadastre um novo trabalho.</div>`);
+function wList(){
+  const e=aevt(),q=norm(S.aq);
+  const l=D.trabalhos.filter(t=>t.evento===e.id&&(S.agt==='all'||t.gt===S.agt)&&(S.adia==='all'||t.dia===S.adia)&&(S.ast==='all'||t.status===S.ast)&&(!q||norm(t.titulo).includes(q)||t.autores.some(a=>norm(a.nome).includes(q))||t.kw.some(k=>norm(k).includes(q)))).sort(sortT);
+  return `<p class="count">${l.length} de ${nT(e)} trabalho(s)</p>`+(l.length?`<div class="w-tw"><table class="w-table"><thead><tr><th>Título</th><th>GT</th><th>Data</th><th>Hora</th><th>Sala</th><th>1º autor</th><th>Apresenta</th><th>Situação</th><th><span class="sr">Ações</span></th></tr></thead><tbody>${l.map(t=>{const c=cancelled(t);return `<tr><td class="t ${c?'canc':''}">${esc(t.titulo)}<small class="sub" style="display:block;font-weight:400">${t.kw.map(esc).join(' · ')}</small></td><td><span class="tag">${esc(GT(t.gt).sigla)}</span></td><td>${dshort(t.dia)}</td><td>${t.hora}</td><td>${esc(t.sala)}</td><td>${esc(first(t).nome)}</td><td>${esc(pres(t).nome)}</td><td>${c?'<span class="badge red">Cancelado</span>':'<span class="badge ok">Agendado</span>'}</td><td><div class="w-act"><button class="w-ib" data-act="tr-edit" data-id="${t.id}" aria-label="Editar trabalho">${icon('edit',16)}</button>${c?`<button class="w-ib" data-act="tr-react" data-id="${t.id}" aria-label="Reativar apresentação" title="Reativar apresentação">${icon('check',16)}</button>`:`<button class="w-ib" data-act="tr-cancel" data-id="${t.id}" aria-label="Cancelar apresentação" title="Cancelar apresentação">${icon('x',16)}</button>`}<button class="w-ib" data-act="tr-del" data-id="${t.id}" aria-label="Excluir trabalho">${icon('trash',16)}</button></div></td></tr>`}).join('')}</tbody></table></div>`:`<div class="card empty">${icon('file',40)}<b>Nenhum trabalho encontrado</b>Ajuste os filtros ou cadastre um novo trabalho.</div>`);
 }
-AV['trab-form']=()=>{const d=S.td,e=aevt();const gs=D.gts.filter(g=>g.evento===e.id);
-  return `<div class="ph"><h1>${d.id?'Editar trabalho':'Novo trabalho'}</h1><button class="btn" data-act="adm-nav" data-p="trabalhos">${icon('back')} Voltar</button></div>
-  ${S.err.length?`<div class="alert red" role="alert">${icon('alert')}<div>${S.err.map(esc).join('<br>')}</div></div>`:''}
-  <div class="card"><div class="f"><label for="t-titulo">Título</label><input id="t-titulo" data-t="titulo" value="${esc(d.titulo)}"></div>
+function tabTrab(e){
+  const gs=D.gts.filter(g=>g.evento===e.id);
+  if(!gs.length)return `<div class="card empty">${icon('layers',40)}<b>Cadastre os GTs antes dos trabalhos</b>Todo trabalho precisa estar vinculado a um GT do evento.<br><button class="btn pri" data-act="atab" data-tab="gts">Ir para GTs</button></div>`;
+  return `<div class="w-bar"><h2>Trabalhos</h2><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" data-act="imp">${icon('file',16)} Importar planilha</button><button class="btn" data-act="adm-export">${icon('download',16)} Exportar</button><button class="btn pri" data-act="tr-new">${icon('plus')} Novo trabalho</button></div></div>
+  <div class="w-filters"><input id="aq" type="search" placeholder="Buscar por título, autor ou palavra-chave" value="${esc(S.aq)}" aria-label="Buscar trabalhos">
+   <select data-flt="agt" aria-label="Filtrar por GT"><option value="all">Todos os GTs</option>${gs.map(g=>`<option value="${g.id}" ${S.agt===g.id?'selected':''}>${esc(g.sigla)} · ${esc(g.nome)}</option>`).join('')}</select>
+   <select data-flt="adia" aria-label="Filtrar por dia"><option value="all">Todos os dias</option>${dias(e).map(d=>`<option value="${d}" ${S.adia===d?'selected':''}>${dlong(d)}</option>`).join('')}</select>
+   <select data-flt="ast" aria-label="Filtrar por situação"><option value="all">Todas as situações</option><option value="agendado" ${S.ast==='agendado'?'selected':''}>Agendados</option><option value="cancelado" ${S.ast==='cancelado'?'selected':''}>Cancelados</option></select></div>
+  <div id="wlist">${wList()}</div>`}
+function tabPart(e){return `<div class="w-bar"><h2>Participantes</h2><button class="btn" data-act="adm-export">${icon('download',16)} Exportar lista (CSV)</button></div>
+ <div class="alert ok">${icon('shield')}<div>Os dados abaixo são usados só para organizar o <b>${esc(e.sigla)}</b>. Consentimento registrado com data e hora. Acesso restrito à organização.</div></div>
+ <div class="w-tw"><table class="w-table"><thead><tr><th>Nome</th><th>E-mail</th><th>Instituição</th><th>Consentimento em</th></tr></thead><tbody>${D.pessoas.map(p=>`<tr><td>${esc(p[0])}</td><td>${esc(p[1])}</td><td>${esc(p[2])}</td><td>${p[3]}</td></tr>`).join('')}</tbody></table></div><p class="sub" style="font-size:13px;margin-top:10px">Exibindo 6 de ${e.insc} participantes (exemplo).</p>`}
+
+/* ---- Página do evento / novo evento ---- */
+function eventPage(e){
+  const g=nG(e),t=nT(e);
+  const tabs=[['resumo','Resumo'],['dados','Dados e identidade visual'],['gts','GTs',g],['trabalhos','Trabalhos',t],['part','Participantes',e.insc]];
+  const body=S.atab==='dados'?tabDados(false):({resumo:tabResumo,gts:tabGTs,trabalhos:tabTrab,part:tabPart}[S.atab])(e);
+  return `<div class="w-eh">${logo(e,60)}<div style="flex:1;min-width:240px"><h1>${esc(e.nome)}</h1><div class="w-meta"><span>${icon('calendar',14)} ${rng(e)}</span><span>${icon('pin',14)} ${esc(e.local)}</span><span>app.exemplo.org/${esc(e.slug)}</span></div></div></div>
+  <div class="w-steps" aria-label="Etapas do cadastro do evento"><span class="sub">Etapas:</span>
+   <button class="w-step ok" data-act="atab" data-tab="dados">${icon('check',14)} 1 Dados do evento</button><span aria-hidden="true">›</span>
+   <button class="w-step ${g?'ok':'cur'}" data-act="atab" data-tab="gts">${g?icon('check',14):''} 2 GTs (${g})</button><span aria-hidden="true">›</span>
+   <button class="w-step ${!g?'off':t?'ok':'cur'}" data-act="atab" data-tab="trabalhos">${t?icon('check',14):''} 3 Trabalhos (${t})</button></div>
+  <div class="w-tabs" role="tablist">${tabs.map(([k,l,n])=>`<button role="tab" aria-selected="${S.atab===k}" class="w-tab ${S.atab===k?'on':''}" data-act="atab" data-tab="${k}">${l}${n!==undefined?`<span class="n">${n}</span>`:''}</button>`).join('')}</div>
+  ${body}`;
+}
+function newEventPage(){return `<div class="w-eh"><div><h1>Novo evento</h1><p class="sub">Etapa 1 de 3. Depois de criar o evento, você cadastra os GTs e, em seguida, os trabalhos.</p></div></div>${tabDados(true)}`}
+
+/* ---- Gaveta lateral (GT e trabalho) ---- */
+function gtForm(){const d=S.gd,e=aevt();return `<div class="w-dh"><div><h2 style="font-size:19px">${d.id?'Editar GT':'Novo GT'}</h2><small class="sub">Evento: ${esc(e.nome)}</small></div><button class="w-ib" data-act="drawer-close" aria-label="Fechar">${icon('x')}</button></div>
+ <div class="w-dbody">${errBox()}<div class="f"><label for="g-sigla">Sigla</label><input id="g-sigla" data-g="sigla" maxlength="6" value="${esc(d.sigla)}" placeholder="Ex.: GT5"></div>
+ <div class="f"><label for="g-nome">Nome do GT</label><input id="g-nome" data-g="nome" value="${esc(d.nome)}"></div>
+ <div class="f"><label for="g-coord">Coordenação</label><input id="g-coord" data-g="coord" value="${esc(d.coord)}"></div>
+ <div class="f"><label for="g-desc">Descrição</label><textarea id="g-desc" data-g="desc">${esc(d.desc)}</textarea></div></div>
+ <div class="w-df"><button class="btn" data-act="drawer-close">Cancelar</button><button class="btn pri" data-act="gt-save">Salvar GT</button></div>`}
+function confOf(d){return D.trabalhos.find(t=>t.evento===S.aev&&t.id!==d.id&&!cancelled(t)&&t.dia===d.dia&&norm(t.sala)===norm(d.sala)&&mins(t.hora)<mins(d.hora)+20&&mins(d.hora)<mins(t.hora)+20)}
+function confHint(){const d=S.td;if(!d||!d.dia||!d.hora||!d.sala.trim())return '';const c=confOf(d);
+  return c?`<div class="alert red">${icon('alert')}<div>A ${esc(d.sala)} já está ocupada nesse horário por “${esc(c.titulo)}”.</div></div>`:`<div class="alert ok">${icon('check')}<div>Sala e horário disponíveis.</div></div>`}
+function trabForm(){const d=S.td,e=aevt();const gs=D.gts.filter(g=>g.evento===e.id);
+  return `<div class="w-dh"><div><h2 style="font-size:19px">${d.id?'Editar trabalho':'Novo trabalho'}</h2><small class="sub">Evento: ${esc(e.nome)}</small></div><button class="w-ib" data-act="drawer-close" aria-label="Fechar">${icon('x')}</button></div>
+  <div class="w-dbody">${errBox()}
+  <div class="f"><label for="t-titulo">Título</label><input id="t-titulo" data-t="titulo" value="${esc(d.titulo)}"></div>
   <div class="f"><label for="t-resumo">Resumo</label><textarea id="t-resumo" data-t="resumo">${esc(d.resumo)}</textarea></div>
   <div class="f"><label for="t-kw">Palavras-chave</label><input id="t-kw" data-t="kw" value="${esc(d.kw)}"><small>Separe por vírgula. Ex.: formação docente, inclusão</small></div>
-  <h2 style="font-size:17px;margin:18px 0 10px">Programação</h2><div class="g2">
-  <div class="f"><label for="t-gt">GT</label><select id="t-gt" data-t="gt"><option value="">Selecione…</option>${gs.map(g=>`<option value="${g.id}" ${d.gt===g.id?'selected':''}>${esc(g.sigla)} · ${esc(g.nome)}</option>`).join('')}</select></div>
+  <h3 style="font-size:16px;margin:20px 0 10px">Programação</h3>
+  <div class="w-g2"><div class="f"><label for="t-gt">GT do evento (obrigatório)</label><select id="t-gt" data-t="gt"><option value="">Selecione…</option>${gs.map(g=>`<option value="${g.id}" ${d.gt===g.id?'selected':''}>${esc(g.sigla)} · ${esc(g.nome)}</option>`).join('')}</select></div>
   <div class="f"><label for="t-dia">Data</label><select id="t-dia" data-t="dia"><option value="">Selecione…</option>${dias(e).map(x=>`<option value="${x}" ${d.dia===x?'selected':''}>${dlong(x)}</option>`).join('')}</select></div>
   <div class="f"><label for="t-hora">Hora de início</label><input id="t-hora" type="time" data-t="hora" value="${d.hora}"><small>Duração padrão: 20 min</small></div>
   <div class="f"><label for="t-sala">Sala</label><input id="t-sala" data-t="sala" value="${esc(d.sala)}"></div></div>
-  <h2 style="font-size:17px;margin:18px 0 6px">Autores</h2><p class="sub" style="font-size:14px;margin-bottom:10px">Marque quem é o 1º autor e quem apresenta o trabalho (pode ser a mesma pessoa).</p>
-  ${d.aut.map((a,i)=>`<div class="autbox"><div class="g2"><div class="f" style="margin-bottom:8px"><label for="a-n${i}">Nome</label><input id="a-n${i}" data-ai="${i}" data-af="nome" value="${esc(a.nome)}"></div><div class="f" style="margin-bottom:8px"><label for="a-i${i}">Instituição</label><input id="a-i${i}" data-ai="${i}" data-af="inst" value="${esc(a.inst)}"></div></div>
+  <div id="conf">${confHint()}</div>
+  <h3 style="font-size:16px;margin:20px 0 4px">Autores</h3><p class="sub" style="font-size:14px;margin-bottom:10px">Marque o 1º autor e quem apresenta o trabalho (pode ser a mesma pessoa).</p>
+  ${d.aut.map((a,i)=>`<div class="autbox"><div class="w-g2"><div class="f" style="margin-bottom:8px"><label for="a-n${i}">Nome</label><input id="a-n${i}" data-ai="${i}" data-af="nome" list="dl-aut" autocomplete="off" value="${esc(a.nome)}"></div><div class="f" style="margin-bottom:8px"><label for="a-i${i}">Instituição</label><input id="a-i${i}" data-ai="${i}" data-af="inst" value="${esc(a.inst)}"></div></div>
    <div class="rr"><label><input type="radio" name="prim" data-ai="${i}" data-af="primeiro" ${a.primeiro?'checked':''}> 1º autor</label><label><input type="radio" name="apr" data-ai="${i}" data-af="apresenta" ${a.apresenta?'checked':''}> Apresenta</label>${d.aut.length>1?`<button class="btn sm" data-act="aut-del" data-i="${i}" type="button" style="margin-left:auto">${icon('trash',16)} Remover</button>`:''}</div></div>`).join('')}
-  <button class="btn" data-act="aut-add" type="button">${icon('plus')} Adicionar autor</button>
-  ${d.id?`<div class="f" style="margin-top:18px"><label for="t-st">Situação da apresentação</label><select id="t-st" data-t="status"><option value="agendado" ${d.status==='agendado'?'selected':''}>Agendada</option><option value="cancelado" ${d.status==='cancelado'?'selected':''}>Cancelada</option></select></div>`:''}
-  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><button class="btn pri" data-act="tr-save">Salvar trabalho</button><button class="btn" data-act="adm-nav" data-p="trabalhos">Cancelar</button></div></div>`};
-
-AV.part=()=>{const e=aevt();return `<div class="ph"><h1>Participantes</h1><button class="btn" data-act="adm-export">${icon('download')} Exportar lista (CSV)</button></div>
- <div class="alert ok">${icon('shield')}<div>Os dados abaixo são usados só para organizar o <b>${esc(e.sigla)}</b>. Consentimento registrado com data e hora. Acesso restrito à organização.</div></div>
- <div class="card scroll-x"><table><thead><tr><th>Nome</th><th>E-mail</th><th>Instituição</th><th>Consentimento</th></tr></thead><tbody>${D.pessoas.map(p=>`<tr><td>${esc(p[0])}</td><td>${esc(p[1])}</td><td>${esc(p[2])}</td><td>${p[3]}</td></tr>`).join('')}</tbody></table><p class="sub" style="font-size:13px;margin-top:10px">Exibindo 6 de ${e.insc} participantes (exemplo).</p></div>`};
+  <button class="btn" data-act="aut-add" type="button">${icon('plus')} Adicionar autor novo</button>${autPicker()}
+  ${d.id?`<div class="f" style="margin-top:20px"><label for="t-st">Situação da apresentação</label><select id="t-st" data-t="status"><option value="agendado" ${d.status==='agendado'?'selected':''}>Agendada</option><option value="cancelado" ${d.status==='cancelado'?'selected':''}>Cancelada</option></select></div>`:''}</div>
+  <div class="w-df"><button class="btn" data-act="drawer-close">Cancelar</button><button class="btn pri" data-act="tr-save">Salvar trabalho</button></div>`}
+function autoresEvento(){const m=new Map();D.trabalhos.filter(t=>t.evento===S.aev).forEach(t=>t.autores.forEach(a=>{const k=norm(a.nome);if(!m.has(k))m.set(k,{nome:a.nome,inst:a.inst,n:0});m.get(k).n++}));return [...m.values()].sort((a,b)=>a.nome.localeCompare(b.nome,'pt-BR'))}
+function autList(){const q=norm(S.aus||'');const used=new Set((S.td?S.td.aut:[]).map(a=>norm(a.nome)));
+ const l=autoresEvento().filter(a=>!q||norm(a.nome).includes(q)||norm(a.inst).includes(q));
+ return l.length?l.map(a=>`<div class="aurow"><div><b>${esc(a.nome)}</b><small>${esc(a.inst)} · ${a.n} trabalho${a.n>1?'s':''}</small></div>${used.has(norm(a.nome))?'<span class="badge ok">Adicionado</span>':`<button class="btn sm" type="button" data-act="aut-pick" data-n="${esc(a.nome)}">${icon('plus',14)} Adicionar</button>`}</div>`).join(''):'<p class="sub" style="padding:10px">Nenhum autor encontrado. Use “Adicionar autor novo”.</p>'}
+function autPicker(){const all=autoresEvento();return `<div class="card" style="margin-top:14px;background:var(--bg)"><b>Autores já cadastrados neste evento (${all.length})</b><p class="sub" style="font-size:13px;margin:2px 0 8px">Escolha na lista para não digitar de novo e evitar nomes duplicados.</p><input id="aus" type="search" placeholder="Buscar autor ou instituição" value="${esc(S.aus||'')}" aria-label="Buscar autor cadastrado"><div id="aulist" class="aulist">${autList()}</div><datalist id="dl-aut">${all.map(a=>`<option value="${esc(a.nome)}">`).join('')}</datalist></div>`}
+function drawerHTML(){if(!S.drawer)return '';return `<div class="w-dov" data-act="dov"><div class="w-dr" role="dialog" aria-modal="true">${S.drawer==='gt'?gtForm():trabForm()}</div></div>`}
+const ovHTML=()=>S.sheet?`<div class="ov" data-act="ov"><div class="sheet" role="dialog" aria-modal="true">${S.sheet}</div></div>`:'';
 
 function admShell(){
-  if(!S.adm)return `<div class="shell adm" style="justify-content:center;overflow:auto">${AV.login()}${ovHTML()}</div>`;
-  const pg=S.apage;const nav=[['dash','Painel','home'],['eventos','Eventos','calendar'],['gts','GTs','layers'],['trabalhos','Trabalhos','file'],['part','Participantes','users']];
-  const act=pg==='evento-form'?'eventos':pg==='trab-form'?'trabalhos':pg;
-  return `<div class="shell adm"><div class="adm-top"><b>Painel administrativo</b><select data-flt="aev" aria-label="Evento em gestão">${D.eventos.map(e=>`<option value="${e.id}" ${S.aev===e.id?'selected':''}>${esc(e.sigla)} · ${esc(e.nome)}</option>`).join('')}</select><button class="ibtn" style="background:var(--bg);color:var(--ink)" data-act="adm-logout" aria-label="Sair">${icon('logout')}</button></div>
-  <div class="adm-body"><nav class="adm-nav" aria-label="Menu do administrador">${nav.map(([k,l,i])=>`<button class="${act===k?'on':''}" data-act="adm-nav" data-p="${k}">${icon(i)}${l}</button>`).join('')}</nav><main class="adm-main view">${AV[pg]()}</main></div>${ovHTML()}</div>`;
+  if(!S.adm)return loginHTML();
+  const e=aevt();
+  return `<div class="shell wadm"><header class="w-top"><div class="w-brand">${logo(null,34)}<b>Eventos Científicos</b><span>Administração</span></div>
+   <div class="w-top-r"><button class="btn sm" data-act="mode" data-m="part">${icon('phone',16)} Ver como participante</button><button class="btn sm" data-act="guide">${icon('sliders',16)} Protótipo</button><span class="w-user">admin@organizacao.org</span><button class="btn sm" data-act="adm-logout">${icon('logout',16)} Sair</button></div></header>
+   <div class="w-body"><aside class="w-side" aria-label="Eventos"><div class="w-side-h"><b>Eventos</b><button class="btn pri sm" data-act="ev-new">${icon('plus',16)} Novo evento</button></div>
+   ${D.eventos.map(x=>`<button class="w-ev ${!S.newEv&&x.id===S.aev?'on':''}" data-act="ev-sel" data-id="${x.id}" ${!S.newEv&&x.id===S.aev?'aria-current="true"':''}>${logo(x,40)}<div><b>${esc(x.nome)}</b><small>${rng(x)}</small><small>${nG(x)} GTs · ${nT(x)} trabalhos</small></div></button>`).join('')}
+   ${S.newEv?`<div class="w-ev on" style="border-style:dashed"><span class="logo mono" style="width:40px;height:40px;color:var(--p)">${icon('plus',18)}</span><div><b>Novo evento</b><small>em cadastro</small></div></div>`:''}</aside>
+   <main class="w-main">${S.newEv?newEventPage():eventPage(e)}</main></div>${ovHTML()}${drawerHTML()}</div>`;
 }
-const ovHTML=()=>S.sheet?`<div class="ov" data-act="ov"><div class="sheet" role="dialog" aria-modal="true" style="max-width:480px">${S.sheet}</div></div>`:'';
+
 
 /* ================= Guia do protótipo ================= */
 function guideHTML(){return `<h2>Protótipo navegável</h2><p class="sub">Clique à vontade: nada é gravado de verdade.</p>
@@ -674,12 +792,18 @@ function guideHTML(){return `<h2>Protótipo navegável</h2><p class="sub">Clique
 let lastKey='';
 function render(){
   applyTheme();
-  const old=$('.view');const top=old?old.scrollTop:0;
-  const key=S.mode+(S.mode==='part'?cur().name+JSON.stringify(cur().params||{}):S.apage);
-  const shell=S.mode==='admin'?admShell():phoneShell();
-  $('#app').innerHTML=`<div class="stage"><aside class="guide">${guideHTML()}</aside><div class="main">${shell}</div><button class="fab" data-act="guide" aria-label="Abrir guia do protótipo">${icon('sliders',22)}</button></div>`;
-  const nv=$('.view');if(nv&&key===lastKey)nv.scrollTop=top;lastKey=key;
+  const old=$('.view')||$('.w-main');const top=old?old.scrollTop:0;
+  const dr=$('.w-dbody');const dtop=dr?dr.scrollTop:0;
+  const key=S.mode+(S.mode==='part'?cur().name+JSON.stringify(cur().params||{}):S.aev+S.atab+S.newEv);
+  if(S.mode==='admin'){
+    $('#app').innerHTML=`<div class="stage"><div class="main admmain">${admShell()}</div></div>`;
+  }else{
+    $('#app').innerHTML=`<div class="stage"><aside class="guide">${guideHTML()}</aside><div class="main">${phoneShell()}</div><button class="fab" data-act="guide" aria-label="Abrir guia do protótipo">${icon('sliders',22)}</button></div>`;
+  }
+  const nv=$('.view')||$('.w-main');if(nv&&key===lastKey)nv.scrollTop=top;lastKey=key;
+  const nd=$('.w-dbody');if(nd&&dr)nd.scrollTop=dtop;
 }
+
 
 /* ================= Ações ================= */
 const ACT={
@@ -744,47 +868,65 @@ const ACT={
   const it=evTr().filter(t=>inAg(t.id)&&!cancelled(t)).sort(sortT)[0];
   if(!it){if(S.stack[0].name==='events')S.stack=[{name:'program'}];render();toast('Adicione um trabalho à agenda para simular o cancelamento.');return}
   it.status='cancelado';render();pushNote('Apresentação cancelada',it.titulo,it.id)},
- reset(){D=seed();S.agenda={};S.sheet=null;S.user=null;S.stack=[{name:'events'}];S.eventId=null;S.pushAsked=false;S.push=false;S.banner=true;render();toast('Dados de exemplo restaurados')},
+ reset(){D=seed();S.agenda={};S.sheet=null;S.user=null;S.stack=[{name:'events'}];S.eventId=null;S.pushAsked=false;S.push=false;S.banner=true;S.aev='e1';S.atab='resumo';S.newEv=false;S.drawer=null;S.ed={...D.eventos[0]};render();toast('Dados de exemplo restaurados')},
 
  /* admin */
- 'adm-login'(){S.adm=true;S.apage='dash';render()},
- 'adm-logout'(){S.adm=false;render()},
- 'adm-nav'(el){S.apage=el.dataset.p;S.err=[];render()},
- 'ev-new'(){S.ed={id:null,nome:'',sigla:'',slug:'',local:'',ini:'2027-05-10',fim:'2027-05-12',cp:'#6A3FB5',cs:'#E9DFF8',cd:'#F0A202',logoUrl:''};S.err=[];S.apage='evento-form';render()},
- 'ev-edit'(el){S.ed={...D.eventos.find(e=>e.id===el.dataset.id)};S.err=[];S.apage='evento-form';render()},
+ 'adm-login'(){S.adm=true;S.atab='resumo';S.newEv=false;S.ed=copyEv();render()},
+ 'adm-logout'(){S.adm=false;S.drawer=null;render()},
+ 'ev-sel'(el){S.aev=el.dataset.id;S.newEv=false;S.drawer=null;S.err=[];S.agt='all';S.adia='all';S.ast='all';S.aq='';S.ed=copyEv();render()},
+ 'ev-new'(){S.newEv=true;S.drawer=null;S.err=[];S.ed={id:null,nome:'',sigla:'',slug:'',local:'',ini:'2027-05-10',fim:'2027-05-12',cp:'#6A3FB5',cs:'#E9DFF8',cd:'#F0A202',logoUrl:''};render()},
+ 'ev-cancel-new'(){S.newEv=false;S.err=[];S.ed=copyEv();render()},
+ atab(el){S.atab=el.dataset.tab;S.err=[];S.drawer=null;if(S.atab==='dados')S.ed=copyEv();render()},
  'logo-file'(el){const f=el.files&&el.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{S.ed.logoUrl=r.result;render()};r.readAsDataURL(f)},
  'logo-del'(){S.ed.logoUrl='';render()},
- 'ev-save'(){const d=S.ed;const er=[];if(!d.nome.trim())er.push('Informe o nome do evento.');
-  if(!d.slug.trim())d.slug=slugify(d.nome);if(D.eventos.some(e=>e.slug===d.slug&&e.id!==d.id))er.push('Este endereço já é usado por outro evento.');
+ 'ev-save'(){const d=S.ed;const er=[];
+  if(!d.nome.trim())er.push('Informe o nome do evento.');
+  if(!d.slug.trim())d.slug=slugify(d.nome);
+  if(D.eventos.some(e=>e.slug===d.slug&&e.id!==d.id))er.push('Este endereço já é usado por outro evento.');
   if(!d.ini||!d.fim||d.fim<d.ini)er.push('Confira as datas: o término não pode ser antes do início.');
   if(!d.sigla.trim())d.sigla=d.nome.split(' ').filter(w=>w.length>2).map(w=>w[0]).join('').slice(0,4).toUpperCase()||'EV';
-  S.err=er;if(er.length){render();$('.view').scrollTop=0;return}
-  if(d.id){const i=D.eventos.findIndex(e=>e.id===d.id);D.eventos[i]={...D.eventos[i],...d}}else{d.id='e'+(D.eventos.length+1+Date.now()%1000);d.insc=0;D.eventos.push({...d});S.aev=d.id}
-  S.apage='eventos';render();toast('Evento salvo')},
- 'gt-new'(){gtSheet(null)},'gt-edit'(el){gtSheet(el.dataset.id)},
- 'gt-save'(){const s=$('#g-sigla').value.trim(),n=$('#g-nome').value.trim();if(!s||!n){$('#gerr').innerHTML=`<div class="alert red" role="alert">${icon('alert')}<div>Informe a sigla e o nome do GT.</div></div>`;return}
-  const v={sigla:s,nome:n,coord:$('#g-coord').value.trim(),desc:$('#g-desc').value.trim()};
-  if(S.gtEdit)Object.assign(D.gts.find(g=>g.id===S.gtEdit),v);else D.gts.push({id:'g'+Date.now(),evento:S.aev,...v});
-  S.sheet=null;render();toast('GT salvo')},
+  S.err=er;if(er.length){render();const m=$('.w-main');if(m)m.scrollTop=0;return}
+  const {_slugTouched,...clean}=d;const wasNew=!d.id;
+  if(wasNew){clean.id='e'+Date.now();clean.insc=0;D.eventos.push(clean);S.aev=clean.id;S.newEv=false;S.atab='gts'}
+  else{const i=D.eventos.findIndex(e=>e.id===d.id);D.eventos[i]={...D.eventos[i],...clean}}
+  S.ed=copyEv();render();toast(wasNew?'Evento criado. Próximo passo: cadastre os GTs.':'Alterações salvas')},
+ 'gt-new'(){S.gd={id:null,sigla:'GT'+(nG(aevt())+1),nome:'',coord:'',desc:''};S.err=[];S.drawer='gt';render()},
+ 'gt-edit'(el){S.gd={...D.gts.find(g=>g.id===el.dataset.id)};S.err=[];S.drawer='gt';render()},
+ 'gt-save'(){const d=S.gd,er=[];
+  if(!d.sigla.trim())er.push('Informe a sigla do GT.');if(!d.nome.trim())er.push('Informe o nome do GT.');
+  if(D.gts.some(g=>g.evento===S.aev&&g.id!==d.id&&norm(g.sigla)===norm(d.sigla)))er.push('Já existe um GT com esta sigla neste evento.');
+  S.err=er;if(er.length){render();return}
+  const v={sigla:d.sigla.trim(),nome:d.nome.trim(),coord:d.coord.trim(),desc:d.desc.trim()};
+  if(d.id)Object.assign(D.gts.find(g=>g.id===d.id),v);else D.gts.push({id:'g'+Date.now(),evento:S.aev,...v});
+  S.drawer=null;S.err=[];render();toast('GT salvo')},
  'gt-del'(el){const g=D.gts.find(x=>x.id===el.dataset.id);const n=D.trabalhos.filter(t=>t.gt===g.id).length;
   if(n){openSheet(`<h3>Não é possível excluir</h3><p>O ${esc(g.sigla)} tem ${n} trabalho(s). Mude esses trabalhos para outro GT e tente de novo.</p><div class="acts"><button class="btn pri" data-act="close">Entendi</button></div>`);return}
   confirmSheet('Excluir GT?',`O ${esc(g.sigla)} · ${esc(g.nome)} será removido.`,'Excluir GT',()=>{D.gts=D.gts.filter(x=>x.id!==g.id);render();toast('GT excluído')})},
- 'tr-new'(){S.td={id:null,titulo:'',resumo:'',kw:'',gt:'',dia:'',hora:'09:00',sala:'',status:'agendado',aut:[{nome:'',inst:'',primeiro:true,apresenta:true}]};S.err=[];S.apage='trab-form';render()},
- 'tr-edit'(el){const t=TR(el.dataset.id);S.td={id:t.id,titulo:t.titulo,resumo:t.resumo,kw:t.kw.join(', '),gt:t.gt,dia:t.dia,hora:t.hora,sala:t.sala,status:t.status,aut:t.autores.map(a=>({...a}))};S.err=[];S.apage='trab-form';render()},
+ 'drawer-close'(){S.drawer=null;S.err=[];render()},
+ dov(el,e){if(e.target===el){S.drawer=null;S.err=[];render()}},
+ 'tr-new'(){S.aus='';S.td={id:null,titulo:'',resumo:'',kw:'',gt:'',dia:'',hora:'09:00',sala:'',status:'agendado',aut:[{nome:'',inst:'',primeiro:true,apresenta:true}]};S.err=[];S.drawer='trab';render()},
+ 'tr-edit'(el){S.aus='';const t=TR(el.dataset.id);S.td={id:t.id,titulo:t.titulo,resumo:t.resumo,kw:t.kw.join(', '),gt:t.gt,dia:t.dia,hora:t.hora,sala:t.sala,status:t.status,aut:t.autores.map(a=>({...a}))};S.err=[];S.drawer='trab';render()},
+ 'aut-pick'(el){const a=autoresEvento().find(x=>x.nome===el.dataset.n);if(!a)return;
+  const ei=S.td.aut.findIndex(x=>!x.nome.trim());
+  if(ei>=0)Object.assign(S.td.aut[ei],{nome:a.nome,inst:a.inst});else S.td.aut.push({nome:a.nome,inst:a.inst,primeiro:false,apresenta:false});
+  render();toast(a.nome+' adicionado aos autores')},
  'aut-add'(){S.td.aut.push({nome:'',inst:'',primeiro:false,apresenta:false});render()},
  'aut-del'(el){const i=+el.dataset.i;const [r]=S.td.aut.splice(i,1);if(r.primeiro)S.td.aut[0].primeiro=true;if(r.apresenta)S.td.aut[0].apresenta=true;render()},
  'tr-save'(){const d=S.td,er=[];
-  if(!d.titulo.trim())er.push('Informe o título do trabalho.');if(!d.gt)er.push('Escolha o GT.');if(!d.dia)er.push('Escolha a data da apresentação.');if(!d.hora)er.push('Informe a hora de início.');if(!d.sala.trim())er.push('Informe a sala.');
+  if(!d.titulo.trim())er.push('Informe o título do trabalho.');if(!d.gt)er.push('Escolha o GT do trabalho.');if(!d.dia)er.push('Escolha a data da apresentação.');if(!d.hora)er.push('Informe a hora de início.');if(!d.sala.trim())er.push('Informe a sala.');
   if(d.aut.some(a=>!a.nome.trim()))er.push('Preencha o nome de todos os autores ou remova a linha vazia.');
   if(!d.aut.some(a=>a.primeiro))er.push('Marque o 1º autor.');if(!d.aut.some(a=>a.apresenta))er.push('Marque quem apresenta o trabalho.');
-  if(d.dia&&d.hora&&d.sala){const c=D.trabalhos.find(t=>t.evento===S.aev&&t.id!==d.id&&!cancelled(t)&&t.dia===d.dia&&norm(t.sala)===norm(d.sala)&&mins(t.hora)<mins(d.hora)+20&&mins(d.hora)<mins(t.hora)+20);if(c)er.push(`A ${d.sala} já está ocupada nesse horário por “${c.titulo}”.`)}
-  S.err=er;if(er.length){render();$('.view').scrollTop=0;return}
+  if(d.dia&&d.hora&&d.sala.trim()){const c=confOf(d);if(c)er.push(`A ${d.sala} já está ocupada nesse horário por “${c.titulo}”.`)}
+  S.err=er;if(er.length){render();const b=$('.w-dbody');if(b)b.scrollTop=0;return}
   const v={titulo:d.titulo.trim(),resumo:d.resumo.trim()||'Resumo não informado.',kw:d.kw.split(',').map(s=>s.trim()).filter(Boolean),gt:d.gt,dia:d.dia,hora:d.hora,sala:d.sala.trim(),status:d.status,autores:d.aut.map(a=>({nome:a.nome.trim(),inst:a.inst.trim(),primeiro:a.primeiro,apresenta:a.apresenta}))};
   if(d.id)Object.assign(TR(d.id),v);else D.trabalhos.push({id:Math.max(...D.trabalhos.map(t=>t.id))+1,evento:S.aev,...v});
-  S.apage='trabalhos';render();toast('Trabalho salvo')},
+  S.drawer=null;S.err=[];render();toast('Trabalho salvo')},
  'tr-cancel'(el){const t=TR(el.dataset.id);const n=(t.id*7)%38+3;confirmSheet('Cancelar a apresentação?',`“${esc(t.titulo)}” continua no programa, com o selo Cancelado. ${n} participantes que o têm na agenda serão avisados.`,'Cancelar apresentação',()=>{t.status='cancelado';render();toast(`Cancelada. ${n} participantes avisados.`)})},
  'tr-react'(el){const t=TR(el.dataset.id);t.status='agendado';render();toast('Apresentação reativada')},
  'tr-del'(el){const t=TR(el.dataset.id);confirmSheet('Excluir o trabalho?','Ele será removido do programa e das agendas. Para manter o registro, prefira cancelar a apresentação.','Excluir trabalho',()=>{D.trabalhos=D.trabalhos.filter(x=>x.id!==t.id);render();toast('Trabalho excluído')})},
+ imp(){openSheet(`<h3>Importar trabalhos por planilha</h3><p>Ideal para cadastrar centenas de trabalhos de uma vez. Use o modelo com as colunas: título, resumo, palavras-chave, <b>sigla do GT</b>, data, hora, sala e autores (nome, instituição, 1º autor, apresenta).</p><div class="alert">${icon('alert')}<div>A sigla do GT precisa existir neste evento. Linhas com erro são listadas para correção, sem travar as demais.</div></div><div class="acts"><button class="btn" data-act="imp-model">Baixar planilha modelo</button><button class="btn pri" data-act="imp-run">Selecionar arquivo e importar</button><button class="btn ghost" data-act="close">Cancelar</button></div>`)},
+ 'imp-model'(){toast('Planilha modelo gerada (simulado)')},
+ 'imp-run'(){S.sheet=null;render();toast('Importação simulada: 3 linhas com erro para corrigir')},
  'adm-export'(){toast('Arquivo CSV gerado (simulado)')}
 };
 document.addEventListener('click',e=>{
@@ -803,13 +945,20 @@ document.addEventListener('keydown',e=>{
 document.addEventListener('input',e=>{
   const el=e.target;
   if(el.id==='q'){S.q=el.value;$('#results').innerHTML=searchResults();return}
-  if(el.id==='aq'){S.aq=el.value;$('#alist').innerHTML=adminList();return}
-  if(el.dataset.flt){const k=el.dataset.flt;if(k==='aev'){S.aev=el.value;S.agt='all';S.err=[]}else S[k]=el.value;render();return}
-  if(S.ed&&el.dataset.f){S.ed[el.dataset.f]=el.value;if(el.dataset.f==='nome'&&!S.ed.id&&!S.ed._slugTouched){S.ed.slug=slugify(el.value);const s=$('#e-slug');if(s)s.value=S.ed.slug}
-    if(el.dataset.f==='slug')S.ed._slugTouched=true;const pv=$('#evprev');if(pv)pv.innerHTML=evPreview();return}
-  if(S.td&&el.dataset.t){S.td[el.dataset.t]=el.value;return}
+  if(el.id==='aus'){S.aus=el.value;const l=$('#aulist');if(l)l.innerHTML=autList();return}
+  if(el.id==='aq'){S.aq=el.value;const l=$('#wlist');if(l)l.innerHTML=wList();return}
+  if(el.dataset.flt){S[el.dataset.flt]=el.value;render();return}
+  if(S.ed&&el.dataset.f){S.ed[el.dataset.f]=el.value;
+    if(el.dataset.f==='nome'&&!S.ed.id&&!S.ed._slugTouched){S.ed.slug=slugify(el.value);const s=$('#e-slug');if(s)s.value=S.ed.slug}
+    if(el.dataset.f==='slug')S.ed._slugTouched=true;
+    const pv=$('#evprev');if(pv)pv.innerHTML=evPreview();return}
+  if(S.gd&&el.dataset.g){S.gd[el.dataset.g]=el.value;return}
+  if(S.td&&el.dataset.t){S.td[el.dataset.t]=el.value;const c=$('#conf');if(c)c.innerHTML=confHint();return}
   if(S.td&&el.dataset.ai!==undefined){const a=S.td.aut,i=+el.dataset.ai,f=el.dataset.af;
-    if(f==='primeiro'||f==='apresenta'){a.forEach((x,j)=>x[f]=(j===i))}else a[i][f]=el.value}
+    if(f==='primeiro'||f==='apresenta'){a.forEach((x,j)=>x[f]=(j===i))}else{a[i][f]=el.value;if(f==='nome'&&!a[i].inst.trim()){const m=autoresEvento().find(x=>norm(x.nome)===norm(el.value));if(m){a[i].inst=m.inst;const ii=$('#a-i'+i);if(ii)ii.value=m.inst}}}}
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){if(S.drawer){S.drawer=null;S.err=[];render()}else if(S.sheet)closeSheet()}
 });
 render();
 </script>
